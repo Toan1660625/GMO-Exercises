@@ -1,3 +1,13 @@
+/*
+ * Copyright (C) 2019 by GMO Runsystem Company
+ *
+ * Create Authentication class HumanInfo
+ *
+ * @version 1.0
+ *
+ * @author Toan
+ *
+ */
 package pks.DTO;
 
 import java.text.ParseException;

@@ -1,3 +1,13 @@
+/*
+ * Copyright (C) 2019 by GMO Runsystem Company
+ *
+ * Create Authentication class StudentInfo
+ *
+ * @version 1.0
+ *
+ * @author Toan
+ *
+ */
 package pks.DTO;
 
 public class StudentInfo extends HumanInfo {

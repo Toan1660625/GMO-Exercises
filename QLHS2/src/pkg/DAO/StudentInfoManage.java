@@ -1,3 +1,13 @@
+/*
+ * Copyright (C) 2019 by GMO Runsystem Company
+ *
+ * Create Authentication class StudentInfoManage
+ *
+ * @version 1.0
+ *
+ * @author Toan
+ *
+ */
 package pkg.DAO;
 
 import java.util.ArrayList;
