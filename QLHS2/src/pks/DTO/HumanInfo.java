@@ -37,7 +37,6 @@ public class HumanInfo {
 		try {
 			this.dateOfBirth = formatter.parse(date);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -54,7 +53,6 @@ public class HumanInfo {
 		try {
 			dateOfBirth = formatter.parse(tempdate);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

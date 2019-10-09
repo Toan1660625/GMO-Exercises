@@ -16,6 +16,7 @@ public class StudentInfoDAO {
 			BufferedReader br = new BufferedReader(fr);
 			String onrLine;
 			
+			// Thêm từng học sinh vào danh sách
 			while ((onrLine = br.readLine()) != null) {
 				String[] dongHS = onrLine.split("&");
 				StudentInfo addStudent = new StudentInfo();
@@ -37,6 +38,7 @@ public class StudentInfoDAO {
 		try {
 			FileWriter txtFile = new FileWriter("D:\\GMO SYSTEM\\Exercise\\JavaCode\\QLHS2\\student.txt");
 			
+			//Ghi danh sách đang run lên file text
 			for (int i = 0; i < ListStudent.getListStudent().size(); i++) {
 				txtFile.write(String.valueOf(ListStudent.getListStudent().get(i).getInfoId()));
 				txtFile.write("&");
