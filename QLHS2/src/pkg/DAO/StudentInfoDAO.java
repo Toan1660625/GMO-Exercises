@@ -30,7 +30,7 @@ public class StudentInfoDAO {
 			fr.close();
 			br.close();
 		} catch (Exception ex) {
-			System.out.println("Loi doc file: " + ex);
+			System.out.println("Lỗi doc file: " + ex);
 		}
 	}
 
