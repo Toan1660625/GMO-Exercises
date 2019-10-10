@@ -33,8 +33,8 @@ public class StudentInfoManage {
 	//Hàm nhập 1 danh sách học sinh
 	public void inPutList() {
 		System.out.println("Nhập số lượng học sinh");
-		int SLGV = in.nextInt();
-		for (int i = 0; i < SLGV; i++) {
+		int numberOfStudent = in.nextInt();
+		for (int i = 0; i < numberOfStudent; i++) {
 			StudentInfo hocsinh = new StudentInfo();
 			hocsinh.inPut();
 			this.listStudentManager.add(hocsinh);
@@ -44,8 +44,8 @@ public class StudentInfoManage {
 
 	//Hàm xuất 1 danh sách học sinh
 	public void outPutList() {
-		for (StudentInfo HS : listStudentManager) {
-			HS.printInfo();
+		for (StudentInfo Student : listStudentManager) {
+			Student.printInfo();
 		}
 	}
 
@@ -91,29 +91,29 @@ public class StudentInfoManage {
 	// Hàm sắp xếp danh sắp học sinh 
 	// Nhận vào 1 param để kiêm tra sắp xếp theo điểm trung bình hay Mã học sinh
 	public void sort(String loai) {
-		if (XepLoai.GPA.getCode() == loai) {
+		if (XepLoai.GPA.getCode().equals(loai)) {
 			for (int i = 0; i < listStudentManager.size() - 1; i++) {
 				
 				for (int j = i; j < listStudentManager.size(); j++) {
 					
 					if (listStudentManager.get(j).getAverageScore() > listStudentManager.get(i).getAverageScore()) {
-						StudentInfo tempHS = listStudentManager.get(j);
+						StudentInfo tempStudent = listStudentManager.get(j);
 						listStudentManager.set(j, listStudentManager.get(i));
-						listStudentManager.set(i, tempHS);
+						listStudentManager.set(i, tempStudent);
 					}
 				}
 			}
 			System.out.println("Sắp xếp theo điểm trung bình hoàn tất");
 
-		} else if (XepLoai.MA_HOC_SINH.getCode() == loai) {
+		} else if (XepLoai.MA_HOC_SINH.getCode().equals(loai)) {
 			for (int i = 0; i < listStudentManager.size() - 1; i++) {
 				
 				for (int j = i; j < listStudentManager.size(); j++) {
 					
 					if (listStudentManager.get(j).getStudentId() < listStudentManager.get(i).getStudentId()) {
-						StudentInfo tempHS = listStudentManager.get(j);
+						StudentInfo tempStudent = listStudentManager.get(j);
 						listStudentManager.set(j, listStudentManager.get(i));
-						listStudentManager.set(i, tempHS);
+						listStudentManager.set(i, tempStudent);
 					}
 				}
 			}
