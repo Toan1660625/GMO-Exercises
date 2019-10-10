@@ -11,5 +11,20 @@
 package pkg.defaults;
 
 public enum XepLoai {
-	GPA, MA_HOC_SINH;
+	GPA("GPA"), MA_HOC_SINH("ID_STUDENT");
+	
+	private String code;
+
+	private XepLoai(String code) {
+	       this.code = code;
+	   }
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
 }

@@ -1,7 +1,7 @@
-11&111&20 ly thuong kiet, phuong 3 , hcm&5.5&10/01/2000
-22&222&4123 Lac long quân, hcm&2.5&14/08/1999
-33&333&124 Ly thái tổ, phường 5, tp.Hcm&7.0&23/08/2001
-44&444&20 lac long quan, P4, HCM&4.5&12/12/2009
 66&666&32 le quy don, hcm&10.0&13/01/2009
-55&555&20 hoang dieu&5.7&12/01/2000
+33&333&124 Ly thái tổ, phường 5, tp.Hcm&7.0&23/08/2001
 77&777&20 Ba nghiem, Long an&6.0&11/11/2007
+55&555&20 hoang dieu&5.7&12/01/2000
+11&111&20 ly thuong kiet, phuong 3 , hcm&5.5&10/01/2000
+44&444&20 lac long quan, P4, HCM&4.5&12/12/2009
+22&222&4123 Lac long quân, hcm&2.5&14/08/1999

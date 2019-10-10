@@ -20,7 +20,6 @@ public class HumanInfo {
 	protected int infoId;
 	protected String address;
 	protected Date dateOfBirth;
-	protected SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 	Scanner in = new Scanner(System.in);
 
 	public int getInfoId() {
@@ -40,19 +39,23 @@ public class HumanInfo {
 	}
 
 	public String getDateOfBirth() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		return formatter.format(dateOfBirth);
 	}
 
 	public void setDateOfBirth(String date) {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		try {
 			this.dateOfBirth = formatter.parse(date);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 	}
-
+	
+	//Hàm nhập thông tin của class HumanInfo
 	public void inPut() {
 
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println("Mã thông tin :	");
 		this.infoId = in.nextInt();
 		in.nextLine();
@@ -68,7 +71,9 @@ public class HumanInfo {
 
 	}
 
+	//Hàm xuất thông tin của class HumanInfo .
 	public void printInfo() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println("Mã thông tin :	" + this.infoId);
 		System.out.println("Địa chỉ : " + this.address);
 		System.out.println("Ngày sinh: " + formatter.format(dateOfBirth));

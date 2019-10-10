@@ -19,6 +19,7 @@ import pks.DTO.StudentInfo;
 
 public class StudentInfoDAO {
 
+	// Hàm load danh sách học sinh từ file txt
 	public static void load(StudentInfoManage ListStudent) {
 		try {			
 			File filePath = new File("D:\\GMO SYSTEM\\Exercise\\JavaCode\\QLHS2\\student.txt");
@@ -44,6 +45,7 @@ public class StudentInfoDAO {
 		}
 	}
 
+	//Hàm save danh sách học sinh vào file txt
 	public static void saveData(StudentInfoManage ListStudent) {
 		try {
 			FileWriter txtFile = new FileWriter("D:\\GMO SYSTEM\\Exercise\\JavaCode\\QLHS2\\student.txt");

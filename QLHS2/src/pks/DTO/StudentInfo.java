@@ -32,6 +32,10 @@ public class StudentInfo extends HumanInfo {
 	}
 
 	@Override
+	/*
+	 *Override lại hàm inPut của class HumanInfo
+	 *Nhập thông tin học sinh.
+	 */
 	public void inPut() {
 		int check = 1;
 		do {
@@ -53,6 +57,10 @@ public class StudentInfo extends HumanInfo {
 	}
 
 	@Override
+	/*
+	 *Override lại hàm printInfo của class HumanInfo
+	 *Xuất ra thông tin học sinh.
+	 */
 	public void printInfo() {
 		System.out.println("");
 		System.out.println("Mã học sinh :	" + this.studentId);

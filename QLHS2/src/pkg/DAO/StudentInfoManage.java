@@ -29,7 +29,8 @@ public class StudentInfoManage {
 	public void setListStudent(List<StudentInfo> listStudent) {
 		listStudentManager = listStudent;
 	}
-
+	
+	//Hàm nhập 1 danh sách học sinh
 	public void inPutList() {
 		System.out.println("Nhập số lượng học sinh");
 		int SLGV = in.nextInt();
@@ -41,12 +42,14 @@ public class StudentInfoManage {
 		System.out.println("Thêm học sinh hoàng tất");
 	}
 
+	//Hàm xuất 1 danh sách học sinh
 	public void outPutList() {
 		for (StudentInfo HS : listStudentManager) {
 			HS.printInfo();
 		}
 	}
 
+	//Hàm xóa 1 học sinh
 	public void delete() {
 		System.out.print("Nhập Mã học sinh cần xóa:	");
 		int idStudent = in.nextInt();
@@ -64,6 +67,7 @@ public class StudentInfoManage {
 
 	}
 
+	//Hàm sửa 1 học sinh
 	public void edit() {
 		System.out.print("Nhập mã học sinh cần sửa:	");
 		int idStudent = in.nextInt();
@@ -84,8 +88,10 @@ public class StudentInfoManage {
 		}
 	}
 
-	public void sort(XepLoai loai) {
-		if (loai == XepLoai.GPA) {
+	// Hàm sắp xếp danh sắp học sinh 
+	// Nhận vào 1 param để kiêm tra sắp xếp theo điểm trung bình hay Mã học sinh
+	public void sort(String loai) {
+		if (XepLoai.GPA.getCode() == loai) {
 			for (int i = 0; i < listStudentManager.size() - 1; i++) {
 				
 				for (int j = i; j < listStudentManager.size(); j++) {
@@ -99,7 +105,7 @@ public class StudentInfoManage {
 			}
 			System.out.println("Sắp xếp theo điểm trung bình hoàn tất");
 
-		} else if (loai == XepLoai.MA_HOC_SINH) {
+		} else if (XepLoai.MA_HOC_SINH.getCode() == loai) {
 			for (int i = 0; i < listStudentManager.size() - 1; i++) {
 				
 				for (int j = i; j < listStudentManager.size(); j++) {
