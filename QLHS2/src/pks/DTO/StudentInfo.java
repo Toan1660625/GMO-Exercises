@@ -10,10 +10,12 @@
  */
 package pks.DTO;
 
-public class StudentInfo extends HumanInfo {
+import java.util.Comparator;
 
+public class StudentInfo extends HumanInfo implements Comparable<StudentInfo> {
+	
 	private int studentId;
-	private double averageScore;
+	private Double averageScore;
 
 	public int getStudentId() {
 		return studentId;
@@ -23,8 +25,8 @@ public class StudentInfo extends HumanInfo {
 		this.studentId = studentId;
 	}
 
-	public double getAverageScore() {
-		return averageScore;
+	public Double getAverageScore() {
+		return this.averageScore;
 	}
 
 	public void setAverageScore(double averageScore) {
@@ -68,5 +70,10 @@ public class StudentInfo extends HumanInfo {
 		System.out.println("Điểm trung bình : " + this.averageScore);
 		System.out.println("----------------------------------------");
 	}
+	
+    @Override
+    public int compareTo(StudentInfo obj) {
+        return this.getAverageScore().compareTo(obj.getAverageScore());
+    }
 
 }

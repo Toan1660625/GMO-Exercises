@@ -36,7 +36,7 @@ public class StudentInfoDAO {
 				addStudent.setAddress(dongHS[2]);
 				addStudent.setAverageScore(Double.parseDouble(dongHS[3]));
 				addStudent.setDateOfBirth(dongHS[4]);
-				ListStudent.getListStudent().add(addStudent);
+				ListStudent.getListStudent().put(Integer.parseInt(dongHS[1]),addStudent);
 			}
 			fr.close();
 			br.close();
@@ -51,16 +51,17 @@ public class StudentInfoDAO {
 			FileWriter txtFile = new FileWriter("D:\\GMO SYSTEM\\Exercise\\JavaCode\\QLHS2\\student.txt");
 			
 			//Ghi danh sách đang run lên file text
-			for (int i = 0; i < ListStudent.getListStudent().size(); i++) {
-				txtFile.write(String.valueOf(ListStudent.getListStudent().get(i).getInfoId()));
+			
+			for (StudentInfo student : ListStudent.getListStudent().values()) {
+				txtFile.write(String.valueOf(student.getInfoId()));
 				txtFile.write("&");
-				txtFile.write(String.valueOf(ListStudent.getListStudent().get(i).getStudentId()));
+				txtFile.write(String.valueOf(student.getStudentId()));
 				txtFile.write("&");
-				txtFile.write(ListStudent.getListStudent().get(i).getAddress());
+				txtFile.write(student.getAddress());
 				txtFile.write("&");
-				txtFile.write(String.valueOf(ListStudent.getListStudent().get(i).getAverageScore()));
+				txtFile.write(String.valueOf(student.getAverageScore()));
 				txtFile.write("&");
-				txtFile.write(ListStudent.getListStudent().get(i).getDateOfBirth());
+				txtFile.write(student.getDateOfBirth());
 				txtFile.write("\r\n");
 			}
 			txtFile.close();
